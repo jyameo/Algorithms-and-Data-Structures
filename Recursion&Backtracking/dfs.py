@@ -45,8 +45,7 @@ class Combination:
                     dfs(i, target - candidates[i],
                         tmp + [candidates[i]])
         dfs(0, target, [])
-        t = {tuple(sorted(x)) for x in self.result}
-        return [list(x) for x in t]
+        return [sorted(x) for x in self.result]
 
 
 class Subset(object):
@@ -94,6 +93,6 @@ class nQueens:
 
 print(Permutation().permute([1, 2, 3]))
 print(Combination().combine(3, 2))
-print(Combination().combinationSum([8, 7, 4, 3, 3, 4], 11))
+print(Combination().combinationSum([1, 2, 3], 4))
 print(Subset().compute([1, 2, 3]))
 print(nQueens().solveNQueens(4))
