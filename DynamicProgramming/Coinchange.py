@@ -1,4 +1,20 @@
 class CoinChange:
+    def naiveMemoize(self, amount, coins, index, cache):
+        if index in cache:
+            return cache[index]
+        else:
+            if amount < 0:
+                return 0
+            if amount == 0:
+                return 1
+
+            if index == len(coins):
+                return 0
+
+            result = self.naiveApproach(amount - coins[index], coins, index)\
+                + self.naiveApproach(amount, coins, index + 1)
+            cache[index] = result
+            return cache[index]
 
     def naiveApproach(self, amount, coins, index):
         if amount < 0:
@@ -32,6 +48,10 @@ from time import time
 t1 = time()
 print(coinChange.naiveApproach(max_amount, coins, 0))
 print('Naive recursion took: {} seconds'.format(time() - t1))
+cache = dict()
+t1= time()
+print(coinChange.naiveMemoize(max_amount, coins, 0, cache))
+print('Naive Memoization took: {} seconds'.format(time() - t1))
 t1= time()
 print(coinChange.dpApproach(coins, max_amount))
 print('Dynamic programming took: {} seconds'.format(time() - t1))
