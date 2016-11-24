@@ -18,9 +18,6 @@ class Edge(object):
         self.start = start
         self.target = target
 
-    def __cmp__(self, other):
-        return self.cmp(self.weight, other.weight)
-
     def __lt__(self, other):
         return self.weight < other.weight
 
@@ -30,7 +27,7 @@ class PrimsJarnik(object):
         self.unvisitedList = unvisitedList
         self.spanningTree = []
         self.priorityEdges = []
-        self. total = 0
+        self.total = 0
 
     def computeMST(self, vertex):
         self.unvisitedList.remove(vertex)

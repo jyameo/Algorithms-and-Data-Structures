@@ -91,8 +91,8 @@ class nQueens:
         dfs(0, [])
         return self.result
 
-print(Permutation().permute([1, 2, 3]))
-print(Combination().combine(3, 2))
-print(Combination().combinationSum([1, 2, 3], 4))
-print(Subset().compute([1, 2, 3]))
-print(nQueens().solveNQueens(4))
+print('permunation: ' + str(Permutation().permute([1, 2, 3])))
+print('combination: ' + str(Combination().combine(3, 2)))
+print('combinationSum: ' + str(Combination().combinationSum([1, 2, 3], 4)))
+print('Subset: ' + str(Subset().compute([1, 2, 3])))
+print('nqueens: ' + str(nQueens().solveNQueens(4)))
