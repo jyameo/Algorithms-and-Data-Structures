@@ -12,6 +12,9 @@ class Vertex(object):
 
     def __str__(self):
         return self.name
+   
+    def __lt__(self, other):
+        return self.minDistance < other.minDistance
 
 
 class Edge(object):
