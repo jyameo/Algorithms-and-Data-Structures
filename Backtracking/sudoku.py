@@ -1,5 +1,4 @@
 def check_sudoku(grid):
-    ###Your code here.
     if type(grid) is not list or len(grid) != 9:
         return None
         
@@ -45,7 +44,6 @@ def check_sudoku(grid):
 
 import copy
 def solve_sudoku(grid):
-    ###Your code here.
     res = check_sudoku(grid)
     if not res or res == None:
         return res
