@@ -65,7 +65,6 @@ class Subset(object):
 
 class nQueens:
     def solveNQueens(self, n):
-        # write your code here
         self.board = [-1] * n
         self.result = []
 
