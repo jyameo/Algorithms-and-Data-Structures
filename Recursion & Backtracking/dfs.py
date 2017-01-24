@@ -46,21 +46,7 @@ class Combination:
                         tmp + [candidates[i]])
         dfs(0, target, [])
         return [sorted(x) for x in self.result]
-
-
-class Subset(object):
-    def compute(self, S):
-        self.result = []
-
-        def dfs(depth, start, tmp):
-            if depth == len(S):
-                self.result.append(tmp)
-                return
-            self.result.append(tmp)
-            for i in range(start, len(S)):
-                dfs(depth + 1, i + 1, tmp + [S[i]])
-        dfs(0, 0, [])
-        return self.result
+        
 
 
 class nQueens:
@@ -93,5 +79,4 @@ class nQueens:
 print('permunation: ' + str(Permutation().permute([1, 2, 3])))
 print('combination: ' + str(Combination().combine(3, 2)))
 print('combinationSum: ' + str(Combination().combinationSum([1, 2, 3], 4)))
-print('Subset: ' + str(Subset().compute([1, 2, 3])))
 print('nqueens: ' + str(nQueens().solveNQueens(4)))
