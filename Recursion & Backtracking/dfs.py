@@ -80,3 +80,6 @@ print('permunation: ' + str(Permutation().permute([1, 2, 3])))
 print('combination: ' + str(Combination().combine(3, 2)))
 print('combinationSum: ' + str(Combination().combinationSum([1, 2, 3], 4)))
 print('nqueens: ' + str(nQueens().solveNQueens(4)))
+
+a =set(['a','b'])
+print(a)
